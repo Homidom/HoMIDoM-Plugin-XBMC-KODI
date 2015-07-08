@@ -1,0 +1,1739 @@
+<window >
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<views>50</views>
+	<controls>
+		<control type="image">
+			<description>Normal Default Background Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>scale</aspectratio>
+			<texture>special://home/addons/plugin.video.helloworld/resources/skins/Default/backgrounds/Homidombackground.png</texture>
+			<visible>true</visible>
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>
+		</control>
+		<control type="list" id="99955">
+			<posx>0</posx>
+			<posy>8</posy>
+			<width>220</width>
+			<height>361</height>
+		</control>
+		<control type="list" id="99855">
+			<posx>0</posx>
+			<posy>8</posy>
+			<width>220</width>
+			<height>361</height>
+		</control>
+		<control type="list" id="99755">
+			<posx>0</posx>
+			<posy>8</posy>
+			<width>220</width>
+			<height>361</height>
+		</control>
+		<control type="label" id="99655">
+			<posx>0</posx>
+			<posy>8</posy>
+			<width>220</width>
+			<height>361</height>
+			<visible>false</visible>
+		</control>
+		<control type="label" id="99656">
+			<posx>0</posx>
+			<posy>8</posy>
+			<width>220</width>
+			<height>361</height>
+			<visible>false</visible>
+		</control> 
+		<control type="group" id="88355">
+					
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>
+			<animation effect="slide" start="-440,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-440,0" time="400" tween="quadratic">WindowClose</animation>
+			<animation effect="slide"  start="0,0" end="0,-300" time="450" condition="Control.IsVisible(99755)" >Conditionnal</animation>
+			<animation effect="slide" start="0,0" end="0,00" time="450" condition="!Control.IsVisible(99755)" >Conditionnal</animation>
+			<control type="group">
+				<control type="image">
+					<posx>50</posx>
+					<posy>360</posy>
+					<width>248</width>
+					<height>300</height>
+					<texture border="15">special://home/addons/plugin.video.helloworld/resources/skins/Default/media/ContentPanelHomidom.png</texture>
+				</control>
+				<control type="label">
+				<posx>120</posx>
+				<posy>480</posy>
+				<width>120</width>
+				<height>40</height>
+				<font>font13</font>
+				<textcolor>grey2</textcolor>
+				<label>Image Zone</label>
+				</control>
+				<control type="image" id="99901">
+					<posx>70</posx>
+					<posy>380</posy>
+					<width>210</width>
+					<height>260</height>
+					<aspectratio>scale</aspectratio>
+					<animation effect="fade" time="300">Visible</animation>
+					<animation effect="fade" time="300">Hidden</animation>
+				</control>
+			</control>
+		</control>
+		<control type="list" id="88550">
+			    <visible>false</visible>
+				<posx>0</posx>
+				<posy>10</posy>
+				<width>220</width>
+				<height>250</height>
+				<onleft>88750</onleft>
+				<onright>88750</onright>
+				<onup>88750</onup>
+				<ondown>88750</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="40" width="580">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>41</height>
+						<texture border="0,2,0,2">MenuItemNF.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>680</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Window.IsVisible(Videos)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40" width="580">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>690</width>
+						<height>41</height>
+						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<visible>!Control.HasFocus(50)</visible>
+						<animation effect="fade" time="300">Visible</animation>
+						<animation effect="fade" time="300">Hidden</animation>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>41</height>
+						<texture border="0,2,0,2">special://home/addons/plugin.video.helloworld/resources/skins/Default/media/MenuItemFOHomidom.png</texture>
+						<visible>Control.HasFocus(50)</visible>
+						<animation effect="fade" time="300">Visible</animation>
+						<animation effect="fade" time="300">Hidden</animation>
+					</control>
+					<control type="image">
+						<posx>490</posx>
+						<posy>4</posy>
+						<width>200</width>
+						<height>33</height>
+						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
+						<visible>Control.HasFocus(50) + !IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>680</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Window.IsVisible(Videos)</visible>
+					</control>
+				</focusedlayout>
+		</control>
+		<control type="list" id="88750">
+			    <visible>false</visible>
+				<posx>0</posx>
+				<posy>10</posy>
+				<width>220</width>
+				<height>250</height>
+				<onleft>88750</onleft>
+				<onright>88750</onright>
+				<onup>88750</onup>
+				<ondown>88750</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="40" width="580">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>41</height>
+						<texture border="0,2,0,2">MenuItemNF.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>680</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Window.IsVisible(Videos)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40" width="580">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>690</width>
+						<height>41</height>
+						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<visible>!Control.HasFocus(50)</visible>
+						<animation effect="fade" time="300">Visible</animation>
+						<animation effect="fade" time="300">Hidden</animation>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>41</height>
+						<texture border="0,2,0,2">special://home/addons/plugin.video.helloworld/resources/skins/Default/media/MenuItemFOHomidom.png</texture>
+						<visible>Control.HasFocus(50)</visible>
+						<animation effect="fade" time="300">Visible</animation>
+						<animation effect="fade" time="300">Hidden</animation>
+					</control>
+					<control type="image">
+						<posx>490</posx>
+						<posy>4</posy>
+						<width>200</width>
+						<height>33</height>
+						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
+						<visible>Control.HasFocus(50) + !IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>680</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Window.IsVisible(Videos)</visible>
+					</control>
+				</focusedlayout>
+		</control>
+		<control type="group">
+					
+			<control type="group">
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>
+			<control type="group">
+				<posx>850</posx>
+				<posy>100</posy>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>540</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$VAR[PosterThumb]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<posx>8</posx>
+					<posy>532</posy>
+					<width>344</width>
+					<height>524</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture diffuse="diffuse_mirror3.png" flipy="true" background="true">$VAR[PosterThumb]</texture>
+				</control>
+			</control>
+		</control>
+		</control>
+		<control type="list" id="99950">
+			    <posx>70</posx>
+				<posy>378</posy>
+				<width>220</width>
+				<height>361</height>
+				<onleft>2</onleft>
+				<onright>60</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="40" width="580">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>41</height>
+						<texture border="0,2,0,2">MenuItemNF.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[Property(devicename1)]</label>
+					</control>
+				</itemlayout>
+		</control>
+		<control type="image">
+			<animation effect="slide" start="0,250" end="0,10" time="600" >WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,250" time="600" >WindowClose</animation>
+			<posx>0</posx>
+			<posy>100r</posy>
+			<width>1280</width>
+			<height>100</height>
+			<texture>special://home/addons/plugin.video.helloworld/resources/skins/Default/media/floorHomidom.png</texture>
+			<animation effect="slide" start="0,10" end="0,0" time="600" >WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,10" time="200" >WindowClose</animation>
+		</control>
+		<control type="group" id="88855">
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>
+			<animation effect="slide" start="-670,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-670,0" time="400" tween="quadratic">WindowClose</animation>
+			<control type="group">
+				<animation effect="slide"  start="-128,0" end="0,0" time="450" condition="Control.IsVisible(99755)" >Conditionnal</animation>
+				<animation effect="slide"  end="-128,0" time="450" condition="!Control.IsVisible(99755)" >Conditionnal</animation>
+				<control type="image">
+					<posx>295</posx>
+					<posy>360</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="15">special://home/addons/plugin.video.helloworld/resources/skins/Default/media/ContentPanelHomidom.png</texture>
+				</control>
+				<control type="image">
+					<posx>295</posx>
+					<posy>652</posy>
+					<width>250</width>
+					<height>64</height>
+					<texture border="15">special://home/addons/plugin.video.helloworld/resources/skins/Default/media/ContentPanelMirrorHomidom.png</texture>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="88655">
+					
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>
+			<animation effect="slide" start="-990,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-990,0" time="400" tween="quadratic">WindowClose</animation>
+			<animation effect="slide"  end="502,0" time="450" condition="Control.IsVisible(99855)" >Conditionnal</animation>
+			<animation effect="slide"  end="250,0" time="450" condition="!Control.IsVisible(99855)" >Conditionnal</animation>
+			<control type="group">
+
+				<control type="image">
+					<posx>40</posx>
+					<posy>362</posy>
+					<width>248</width>
+					<height>300</height>
+					<texture border="15">special://home/addons/plugin.video.helloworld/resources/skins/Default/media/ContentPanelHomidom.png</texture>
+				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>652</posy>
+					<width>250</width>
+					<height>64</height>
+					<texture border="15">special://home/addons/plugin.video.helloworld/resources/skins/Default/media/ContentPanelMirrorHomidom.png</texture>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="88455">
+					
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>
+			<animation effect="slide" start="-670,360" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-670,0" time="400" tween="quadratic">WindowClose</animation>
+			<animation effect="slide"  end="0,-300" time="450" condition="Control.IsVisible(99955)" >Conditionnal</animation>
+			<animation effect="slide"  end="0,0" time="450" condition="!Control.IsVisible(99955)" >Conditionnal</animation>
+			<control type="group">
+				<control type="image">
+					<posx>297</posx>
+					<posy>360</posy>
+					<width>248</width>
+					<height>300</height>
+					<texture border="15">special://home/addons/plugin.video.helloworld/resources/skins/Default/media/ContentPanelHomidom.png</texture>
+				</control>
+				<control type="label" id="88440">
+						<posx>297</posx>
+						<posy>362</posy>
+						<width>240</width>
+						<height>40</height>
+						<font>font9</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>Nom du Composant </label>
+				</control>
+				<control type="label" id="88441">
+						<posx>297</posx>
+						<posy>400</posy>
+						<width>240</width>
+						<height>10</height>
+						<font>font10</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label></label>
+						<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label" id="88442">
+						<posx>312</posx>
+						<posy>440</posy>
+						<width>60</width>
+						<height>15</height>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>Etat : </label>
+						<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label" id="88443">
+						<posx>392</posx>
+						<posy>440</posy>
+						<width>240</width>
+						<height>15</height>
+						<font>font10</font>
+						<textcolor>violet</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label></label>
+						<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label" id="88444">
+						<posx>312</posx>
+						<posy>470</posy>
+						<width>60</width>
+						<height>15</height>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>Valeur : </label>
+						<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label" id="88445">
+						<posx>392</posx>
+						<posy>470</posy>
+						<width>240</width>
+						<height>15</height>
+						<font>font10</font>
+						<textcolor>violet</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label></label>
+						<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="image" id="88446">
+					<posx>375</posx>
+					<posy>515</posy>
+					<width>85</width>
+					<height>85</height>
+										
+				</control>
+				<control type="button" id="88451">
+						<posx>435</posx>
+						<posy>620</posy>
+						<width>100</width>
+						<height>30</height>
+						<font>font9</font>
+						<textcolor>violet</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<texturefocus border="5">special://home/addons/plugin.video.helloworld/resources/skins/Default/media/button-focus.png</texturefocus>
+						<texturenofocus border="5">special://home/addons/plugin.video.helloworld/resources/skins/Default/media/button-f.png</texturenofocus>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>Action</label>
+						<posx>80</posx>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<disabledcolor>80FFFFFF</disabledcolor>
+						<pulseonselect></pulseonselect>
+						<onfocus>-</onfocus>
+						<onunfocus>-</onunfocus>
+						<onup>88850</onup>
+						<ondown>88850</ondown>
+						<onleft></onleft>
+						<onright>88650</onright>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+		<animation effect="slide"  end="0" time="450" condition="Control.IsVisible(99855)" >Conditionnal</animation>
+		<animation effect="slide"  end="-250,0" time="450" condition="!Control.IsVisible(99855)" >Conditionnal</animation>
+		<animation effect="slide" start="-990,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="-990,0" time="400" tween="quadratic">WindowClose</animation>		
+		<control type="group">
+		<visible>Control.IsVisible(99855)</visible>
+		<animation effect="fade" time="300">Visible</animation>
+		<animation effect="fade" time="300">Hidden</animation>
+		<control type="list" id="88650">
+				<posx>550</posx>
+				<posy>380</posy>
+				<width>220</width>
+				<height>250</height>
+				<onleft>88451</onleft>
+				<onright></onright>
+				<onup>88650</onup>
+				<ondown>88650</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="40" width="580">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>41</height>
+						<texture border="0,2,0,2">MenuItemNF.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>598</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Window.IsVisible(Videos)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40" width="580">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>690</width>
+						<height>41</height>
+						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<visible>!Control.HasFocus(88850)</visible>
+						<animation effect="fade" time="300">Visible</animation>
+						<animation effect="fade" time="300">Hidden</animation>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>41</height>
+						<texture border="0,2,0,2">special://home/addons/plugin.video.helloworld/resources/skins/Default/media/MenuItemFOHomidom.png</texture>
+						<visible>Control.HasFocus(88650)</visible>
+						<animation effect="fade" time="300">Visible</animation>
+						<animation effect="fade" time="300">Hidden</animation>
+					</control>
+					<control type="image">
+						<posx>408</posx>
+						<posy>4</posy>
+						<width>200</width>
+						<height>33</height>
+						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
+						<visible>Control.HasFocus(88650) + !IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>598</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Window.IsVisible(Videos)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		</control>
+		<control type="group">
+		<animation effect="slide"  start="-128,0" end="0,0" time="450" condition="Control.IsVisible(99755)" >Conditionnal</animation>
+		<animation effect="slide"  end="-128,0" time="450" condition="!Control.IsVisible(99755)" >Conditionnal</animation>
+				
+		<control type="group">
+		<animation effect="slide" start="-670,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="-670,0" time="400" tween="quadratic">WindowClose</animation>
+		<visible>Control.IsVisible(99755)</visible>
+		<animation effect="fade" time="300">Visible</animation>
+		<animation effect="fade" time="300">Hidden</animation>
+		<control type="list" id="88850">
+				<posx>297</posx>
+				<posy>360</posy>
+				<width>220</width>
+				<height>250</height>
+				<onleft>50</onleft>
+				<onright>88451</onright>
+				<onup>88850</onup>
+				<ondown>88850</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="40" width="580">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>41</height>
+						<texture border="0,2,0,2">MenuItemNF.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="image">
+						<posx>190</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>36</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>grey2</colordiffuse>
+						<visible>true</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40" width="580">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>690</width>
+						<height>41</height>
+						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<visible>!Control.HasFocus(88850)</visible>
+						<animation effect="fade" time="300">Visible</animation>
+						<animation effect="fade" time="300">Hidden</animation>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>41</height>
+						<texture border="0,2,0,2">special://home/addons/plugin.video.helloworld/resources/skins/Default/media/MenuItemFOHomidom.png</texture>
+						<visible>Control.HasFocus(88850)</visible>
+						<animation effect="fade" time="300">Visible</animation>
+						<animation effect="fade" time="300">Hidden</animation>
+					</control>
+					<control type="image">
+						<posx>450</posx>
+						<posy>4</posy>
+						<width>200</width>
+						<height>33</height>
+						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
+						<visible>Control.HasFocus(88850) + !IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="image">
+						<posx>190</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>36</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<visible>true</visible>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		</control>
+		<control type="image" id="98888">
+			<description>Normal Default Background Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>scale</aspectratio>
+			<texture>special://home/addons/plugin.video.helloworld/resources/skins/Default/backgrounds/Homidombackground.png</texture>
+			<visible>true</visible>
+		</control>
+		<control type="image" id="98889">
+			<animation effect="slide" start="0,250" end="0,10" time="600" >WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,250" time="600" >WindowClose</animation>
+			<posx>0</posx>
+			<posy>100r</posy>
+			<width>1280</width>
+			<height>100</height>
+			<texture>special://home/addons/plugin.video.helloworld/resources/skins/Default/media/floorHomidom.png</texture>
+			<animation effect="slide" start="0,10" end="0,0" time="600" >WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,10" time="200" >WindowClose</animation>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="-440,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-440,0" time="400" tween="quadratic">WindowClose</animation>
+			
+			<control type="group">
+				<animation effect="fade" time="300">Visible</animation>
+				<animation effect="fade" time="300">Hidden</animation>
+				<visible>Control.IsVisible(50)</visible>
+				<control type="image">
+					<posx>50</posx>
+					<posy>360</posy>
+					<width>250</width>
+					<height>300</height>
+					<texture border="15">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<posx>50</posx>
+					<posy>652</posy>
+					<width>250</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+				
+			<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>
+			<animation effect="slide" start="-440,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-440,0" time="400" tween="quadratic">WindowClose</animation>
+			<control type="list" id="50">
+				
+			   	<posx>70</posx>
+				<posy>378</posy>
+				<width>220</width>
+				<height>250</height>
+				<onleft>88255</onleft>
+				<onright>88850</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="40" width="580">
+					<control type="image">
+						
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>41</height>
+						<texture border="0,2,0,2">MenuItemNF.png</texture>
+					</control>
+					<control type="label" id="88847">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>680</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Window.IsVisible(Videos)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40" width="580">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>690</width>
+						<height>41</height>
+						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<visible>!Control.HasFocus(50)</visible>
+						<animation effect="fade" time="300">Visible</animation>
+						<animation effect="fade" time="300">Hidden</animation>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>41</height>
+						<texture border="0,2,0,2">special://home/addons/plugin.video.helloworld/resources/skins/Default/media/MenuItemFOHomidom.png</texture>
+						<visible>Control.HasFocus(50)</visible>
+						<animation effect="fade" time="300">Visible</animation>
+						<animation effect="fade" time="300">Hidden</animation>
+					</control>
+					<control type="image">
+						<posx>490</posx>
+						<posy>4</posy>
+						<width>200</width>
+						<height>33</height>
+						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
+						<visible>Control.HasFocus(50) + !IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>680</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>violet</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Window.IsVisible(Videos)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group">
+				<posx>850</posx>
+				<posy>100</posy>
+				<visible>Control.IsVisible(50)</visible>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>540</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$VAR[PosterThumb]</texture>
+					<bordertexture border="8">ThumbShadow.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<posx>8</posx>
+					<posy>532</posy>
+					<width>344</width>
+					<height>524</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture diffuse="diffuse_mirror3.png" flipy="true" background="true">$VAR[PosterThumb]</texture>
+				</control>
+			</control>
+		</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
+			<control type="label">
+				<animation effect="slide" start="0,250" end="0,10" time="600" >WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,250" time="600" >WindowClose</animation>
+				<description>Page Count Label</description>
+				<posx>40r</posx>
+				<posy>53r</posy>
+				<width>500</width>
+				<height>20</height>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<scroll>false</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container.NumItems,([COLOR=magenta],[/COLOR]) Zones]$INFO[Container.CurrentPage, - $LOCALIZE[31024] ([COLOR=magenta]]$INFO[Container.NumPages,/,[/COLOR])]</label>
+				
+			</control>
+			<control type="label">
+				<description>Container Duration Label</description>
+				<posx>40r</posx>
+				<posy>32r</posy>
+				<width>500</width>
+				<height>20</height>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<scroll>false</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container.TotalTime,$LOCALIZE[31009] ([COLOR=magenta],[/COLOR])]</label>
+				
+			</control>
+		</control>
+		<include>CommonNowPlaying</include>
+		<control type="group">
+			<posx>120r</posx>
+			<posy>55r</posy>
+			<animation effect="fade" time="250" >WindowOpen</animation>
+			<animation effect="fade" time="250" >WindowClose</animation>
+			<visible>system.getbool(input.enablemouse)</visible>
+		</control>
+		<control type="group" >
+			<posx>120r</posx>
+			<posy>75r</posy>
+			<animation effect="slide" start="0,250" end="0,10" time="600" >WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,250" time="600" >WindowClose</animation>
+			<visible>system.getbool(input.enablemouse)</visible>
+			<control type="label">
+				
+				<animation effect="fade" time="300">Visible</animation>
+				<animation effect="fade" time="300">Hidden</animation>
+				<description>Home Icon</description>
+				<posx>-250</posx>
+				<posy>80r</posy>
+				<width>315</width>
+				<height>15</height>
+				<textcolor>violet</textcolor>
+				<shadowcolor>grey2</shadowcolor>
+				<label>home domotique complete system</label>
+			</control>
+			<control type="image">
+				<animation effect="fade" time="300">Visible</animation>
+				<animation effect="fade" time="300">Hidden</animation>
+				<description>Home Icon</description>
+				<posx>60</posx>
+				<posy>5</posy>
+				<width>55</width>
+				<height>55</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon.png</texture>
+			</control>
+		</control>
+		<include>BehindDialogFadeOut</include>
+		<include>ScrollOffsetLabel</include>
+		<control type="image">
+			<animation effect="fade" time="250" >WindowOpen</animation>
+			<animation effect="fade" time="250" >WindowClose</animation>
+			<description>Section header image</description>
+			<posx>20</posx>
+			<posy>3</posy>
+			<width>35</width>
+			<height>35</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon.png</texture>
+		</control>
+		<control type="grouplist">
+			<animation effect="fade" time="300" >WindowOpen</animation>
+			<animation effect="fade" time="300" >WindowClose</animation>
+			<posx>65</posx>
+			<posy>5</posy>
+			<width min="0" max="900">auto</width>
+			<height>30</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label" id="88844">
+				<width min="0" max="300">auto</width>
+				<height>30</height>
+				<font>font14</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container.NumItems,([COLOR=magenta],[/COLOR])] Zones Homidom [COLOR=white]-[/COLOR] </label>
+			</control>
+			<control type="label" id="88845">
+				<width min="0" max="200">auto</width>
+				<height>30</height>
+				<font>font14</font>
+				<textcolor>violet</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<label></label>
+				<visible>true</visible>
+			</control>
+			<control type="label" id="88846">
+				<posx>-200</posx>
+				<width min="0" max="400">auto</width>
+				<height>30</height>
+				<font>font14</font>
+				<textcolor>violet</textcolor>
+				<shadowcolor>white</shadowcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<label></label>
+				<visible>true</visible>
+			</control>
+			<control type="label" id="88847">
+				<posx>-200</posx>
+				<width min="0" max="400">auto</width>
+				<height>30</height>
+				<font>font14</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>violet</shadowcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<label></label>
+				<visible>true</visible>
+			</control>
+		</control>
+		<control type="group">
+			<posx>-250</posx>
+			<control type="grouplist" id="9000">
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>250</width>
+				<height>600</height>
+				<onleft>9000</onleft>
+				<onright>50</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onback>50</onback>
+				<itemgap>0</itemgap>
+				<control type="label" id="200">
+					<width>250</width>
+					<height>35</height>
+					<font>font12</font>
+					<label>31006</label>
+					<textcolor>blue</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+				</control>
+				<include>CommonNowPlaying_Controls</include>
+			</control>
+		</control>
+		<control type="button" id="88255">
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>
+			<animation effect="slide" start="0,-200" end="0,0" time="300" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,-200" time="300" tween="quadratic">WindowClose</animation>
+			<posx>1130</posx>
+			<posy>0</posy>
+			<width>150</width>
+			<height>110</height>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<texturenofocus border="15">ContentPanel.png</texturenofocus>
+			<texturefocus border="5">special://home/addons/plugin.video.helloworld/resources/skins/Default/media/button-focus.png</texturefocus>
+		</control>
+		<control type="group" >
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>
+			<animation effect="slide" start="0,-200" end="0,0" time="300" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,-200" time="300" tween="quadratic">WindowClose</animation>
+			<control type="group">
+				
+				<control type="image">
+					<posx>1130</posx>
+					<posy>0</posy>
+					<width>150</width>
+					<height>110</height>
+					<texture border="15">ContentPanel.png</texture>
+				</control>
+				<control type="label">
+					<description>Date label</description>
+					<posx>40r</posx>
+					<posy>17</posy>
+					<width>200</width>
+					<height>15</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font10</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[System.Time]</label>
+					
+					<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+				</control>
+				<control type="label">
+					<description>Date label</description>
+					<posx>10r</posx>
+					<posy>42</posy>
+					<width>135</width>
+					<height>1</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Font_Reg12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[System.Date]</label>
+					
+					<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+				</control>
+				<control type="group">
+					<posx>1150</posx>
+					<posy>0</posy>
+					<visible></visible>
+					
+					<control type="image" >
+						<description>Weather image</description>
+						<posx>-10</posx>
+						<posy>2</posy>
+						<width>45</width>
+						<height>45</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[Weather.Conditions]</texture>
+					</control>
+					<control type="label">
+						<description>Location label</description>
+						<posx>5</posx>
+						<posy>58</posy>
+						<width>100</width>
+						<height>3</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Reg12</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[Window(Weather).Property(Location)]</label>
+					</control>
+					<control type="grouplist">
+						<posx>-15</posx>
+						<posy>70</posy>
+						<width>1000</width>
+						<height>30</height>
+						<orientation>horizontal</orientation>
+						<align>left</align>
+						<itemgap>0</itemgap>
+						<control type="label">
+							<description>Temp label</description>
+							<width min="0" max="300">auto</width>
+							<height>30</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>font28_title</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
+						</control>
+						<control type="label">
+							<description>Temp Units</description>
+							<width min="0" max="100">auto</width>
+							<height>30</height>
+							<font>font10</font>
+							<label>$INFO[System.TemperatureUnits]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+						</control>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>17</posx>
+							<posy>74</posy>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							
+							<width>118</width>
+							<height>22</height>
+							<wrapmultiline>true</wrapmultiline>
+							<label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
+							<textcolor>grey2</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="88155">
+			<animation effect="slide"  start="2000,0" end="-4000,0" time="650" condition="Control.IsVisible(88156)" >Conditionnal</animation>		
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>	
+			<animation effect="slide" start="4000,0" end="2000,00" time="600" >WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,00" time="200" >WindowClose</animation>
+			<control type="label" id="88156">
+				<description>Update label</description>
+				<width min="0" max="450">auto</width>
+				<posx>2860</posx>
+				<posy>125</posy>
+				<height>20</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_Reg12</font>
+				<textcolor>violet</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>[COLOR=white]$LOCALIZE[31301] - [/COLOR]$INFO[Window(Weather).Property(Updated)]</label>
+			</control>
+			<control type="group">
+				<control type="image">
+					<posx>2860</posx>
+					<posy>150</posy>
+					<width>420</width>
+					<height>470</height>
+					<texture border="15">ContentPanel.png</texture>
+				</control>
+				<control type="group">
+					<posx>2900</posx>
+					<posy>180</posy>
+					<visible></visible>
+					<control type="image" >
+						<description>Weather image</description>
+						<posx>0</posx>
+						<posy>-22</posy>
+						<width>105</width>
+						<height>105</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[Weather.Conditions]</texture>
+					</control>
+					<control type="label">
+							<description>Temp label</description>
+							<width min="0" max="300">auto</width>
+							<posx>-20</posx>
+							<posy>-25</posy>
+							<height>30</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>font28_title</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
+					</control>
+					<control type="label">
+							<description>Temp Units</description>
+							<posx>5</posx>
+							<posy>-25</posy>
+							<width min="0" max="100">auto</width>
+							<height>22</height>
+							<font>Font_Reg12</font>
+							<aligny>center</aligny>
+							<label>$INFO[System.TemperatureUnits]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>45</posy>
+							<width min="0" max="260">auto</width>
+							<height>22</height>
+							<font>font10</font>
+							<align>center</align>
+							<label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
+							<textcolor>grey2</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Feelslike</description>
+							<posx>120</posx>
+							<posy>-20</posy>
+							<width min="0" max="300">auto</width>
+							<height>22</height>
+							<font>Font_Reg12</font>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[402] :   $INFO[Window(Weather).Property(Current.FeelsLike),  ]  $INFO[System.TemperatureUnits]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Humidity</description>
+							<posx>120</posx>
+							<posy>0</posy>
+							<width min="0" max="300">auto</width>
+							<height>22</height>
+							<font>Font_Reg12</font>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[406] :   $INFO[Window(Weather).Property(Current.Humidity),  ]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Wind</description>
+							<posx>120</posx>
+							<posy>20</posy>
+							<width min="0" max="300">auto</width>
+							<height>22</height>
+							<font>Font_Reg12</font>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[404] :   $INFO[Window(Weather).Property(Current.Wind),  ]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Aurore</description>
+							<posx>120</posx>
+							<posy>70</posy>
+							<width min="0" max="250">auto</width>
+							<height>22</height>
+							<font>Font_Reg12</font>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[33027] :   $INFO[Window(Weather).Property(Today.Sunrise),  ]         $LOCALIZE[33028] :   $INFO[Window(Weather).Property(Today.Sunset)]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+					</control>
+					<control type="image">
+					<posx>-20</posx>
+					<posy>100</posy>
+					<width>420</width>
+					<height>8</height>
+					<texture>special://home/addons/plugin.video.helloworld/resources/skins/Default/media/separator-violet.png</texture>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>-100</posx>
+							<posy>110</posy>
+							<width min="0" max="200">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$INFO[Window(Weather).Property(Day1.Title),  ]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>-105</posx>
+							<posy>125</posy>
+							<width min="0" max="200">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$INFO[Window(Weather).Property(Daily.1.ShortDate),  ]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="image" >
+						<description>Weather image</description>
+						<posx>25</posx>
+						<posy>110</posy>
+						<width>65</width>
+						<height>65</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[Window(Weather).Property(Day1.OutlookIcon)]</texture>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>135</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$INFO[Window(Weather).Property(Day1.Outlook),  ]</label>
+							<textcolor>grey2</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>150</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$LOCALIZE[33022]  :  $INFO[Window(Weather).Property(Daily.1.Precipitation),  ]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>165</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$LOCALIZE[383]: $INFO[Window(Weather).Property(Daily.1.WindSpeed)]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>115</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$LOCALIZE[419] : $INFO[Window(Weather).Property(Day1.HighTemp),  ] $INFO[System.TemperatureUnits]     -    $LOCALIZE[418]  :  $INFO[Window(Weather).Property(Day1.LowTemp),  ] $INFO[System.TemperatureUnits]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="image">
+					<posx>-20</posx>
+					<posy>180</posy>
+					<width>420</width>
+					<height>8</height>
+					<texture>special://home/addons/plugin.video.helloworld/resources/skins/Default/media/separator-violet.png</texture>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>-100</posx>
+							<posy>185</posy>
+							<width min="0" max="200">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$INFO[Window(Weather).Property(Day2.Title),  ]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>-105</posx>
+							<posy>200</posy>
+							<width min="0" max="200">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$INFO[Window(Weather).Property(Daily.2.ShortDate),  ]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="image" >
+						<description>Weather image</description>
+						<posx>25</posx>
+						<posy>185</posy>
+						<width>65</width>
+						<height>65</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[Window(Weather).Property(Day2.OutlookIcon)]</texture>
+						
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>210</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$INFO[Window(Weather).Property(Day2.Outlook),  ]</label>
+							<textcolor>grey2</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>225</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$LOCALIZE[33022]  :  $INFO[Window(Weather).Property(Daily.2.Precipitation),  ]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>240</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$LOCALIZE[383]: $INFO[Window(Weather).Property(Daily.2.WindSpeed)]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>190</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$LOCALIZE[419] : $INFO[Window(Weather).Property(Day2.HighTemp),  ] $INFO[System.TemperatureUnits]     -    $LOCALIZE[418]  :  $INFO[Window(Weather).Property(Day2.LowTemp),  ] $INFO[System.TemperatureUnits]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="image">
+					<posx>-20</posx>
+					<posy>260</posy>
+					<width>420</width>
+					<height>8</height>
+					<texture>special://home/addons/plugin.video.helloworld/resources/skins/Default/media/separator-violet.png</texture>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>-100</posx>
+							<posy>265</posy>
+							<width min="0" max="200">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$INFO[Window(Weather).Property(Day3.Title),  ]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>-105</posx>
+							<posy>280</posy>
+							<width min="0" max="200">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$INFO[Window(Weather).Property(Daily.3.ShortDate),  ]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="image" >
+						<description>Weather image</description>
+						<posx>25</posx>
+						<posy>260</posy>
+						<width>65</width>
+						<height>65</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[Window(Weather).Property(Day3.OutlookIcon)]</texture>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>285</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$INFO[Window(Weather).Property(Day3.Outlook),  ]</label>
+							<textcolor>grey2</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>300</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$LOCALIZE[33022]  :  $INFO[Window(Weather).Property(Daily.3.Precipitation),  ]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>315</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$LOCALIZE[383]: $INFO[Window(Weather).Property(Daily.3.WindSpeed)]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>265</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$LOCALIZE[419] : $INFO[Window(Weather).Property(Day3.HighTemp),  ] $INFO[System.TemperatureUnits]     -    $LOCALIZE[418]  :  $INFO[Window(Weather).Property(Day3.LowTemp),  ] $INFO[System.TemperatureUnits]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					
+					<control type="image">
+					<posx>-20</posx>
+					<posy>335</posy>
+					<width>420</width>
+					<height>8</height>
+					<texture>special://home/addons/plugin.video.helloworld/resources/skins/Default/media/separator-violet.png</texture>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>-100</posx>
+							<posy>345</posy>
+							<width min="0" max="200">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$INFO[Window(Weather).Property(Day4.Title),  ]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>-105</posx>
+							<posy>360</posy>
+							<width min="0" max="200">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$INFO[Window(Weather).Property(Daily.4.ShortDate),  ]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="image" >
+						<description>Weather image</description>
+						<posx>25</posx>
+						<posy>345</posy>
+						<width>65</width>
+						<height>65</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[Window(Weather).Property(Day4.OutlookIcon)]</texture>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>370</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$INFO[Window(Weather).Property(Day4.Outlook),  ]</label>
+							<textcolor>grey2</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>385</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$LOCALIZE[33022]  :  $INFO[Window(Weather).Property(Daily.4.Precipitation),  ]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>400</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$LOCALIZE[383]: $INFO[Window(Weather).Property(Daily.4.WindSpeed)]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+							<description>Conditions Label</description>
+							<posx>90</posx>
+							<posy>350</posy>
+							<width min="0" max="260">auto</width>
+							<height>12</height>
+							<font>Font_Reg12</font>
+							<align>center</align>
+							<label>$LOCALIZE[419] : $INFO[Window(Weather).Property(Day4.HighTemp),  ] $INFO[System.TemperatureUnits]     -    $LOCALIZE[418]  :  $INFO[Window(Weather).Property(Day4.LowTemp),  ] $INFO[System.TemperatureUnits]</label>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="image">
+					<posx>-20</posx>
+					<posy>423</posy>
+					<width>420</width>
+					<height>8</height>
+					<texture>special://home/addons/plugin.video.helloworld/resources/skins/Default/media/separator-violet.png</texture>
+					</control>
+				</control>	
+			</control>
+		</control>
+	</controls>
+</window>

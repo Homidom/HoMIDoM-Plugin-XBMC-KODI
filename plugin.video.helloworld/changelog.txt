@@ -1,0 +1,22 @@
+
+v0.0.1
+- 01-02-2013: Test Version
+
+v0.1.0
+- 22-02-2013: Alpha Version
+
+v0.1.1
+- 28-02-2013: Correction avec ValueDevice="NONE"
+
+v0.1.2
+- 14-03-2013: Correction du bug "Medias inseres"
+			  Correction iddevice avec index ("id")	
+			  Correction if pas image zone	
+			  correction liste deroulante pour zone et composant
+
+v0.1.3
+- 17-10-2013: Compatibilite Linux , Raspberry (Openelec)
+			  Implementation Monitoring	Event XBMC
+			  Amelioration Chargement zones 
+			  
+			  

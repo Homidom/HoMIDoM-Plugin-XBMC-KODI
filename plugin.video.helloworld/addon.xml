@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.homixbmc"
+       name="homixbmc"
+       version="0.1.3"
+       provider-name="Alamata">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.script"
+             library="homixbmc.py">
+    <provides>module</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Homidom Controler</summary>
+    <summary lang="fr">Homidom Contoleur</summary>
+    <description lang="en">With a home automation installation managed by HoMiDoM (http://www.homidom.com) 
+	this addon allow to 
+	Control / Visualize your automation installation at your fingertips from your television !</description>
+    <description lang="fr">Avec une installation domotique geree par HoMiDoM (http://www.homidom.com) 
+	cette extension permet de 
+	Piloter / Visualiser son installation domotique du bout des doigts depuis son poste de television !</description>
+  </extension>
+</addon>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="HOMIDOM">
+		<setting label="IP de Votre Serveur Homidom" type="ipaddress" id="IPserver" default="" />
+		<setting label="ID de Votre Serveur Homidom" type="number" id="IDserver" default="" />
+		<setting label="Port de Votre Serveur Homidom" type="number" id="Portserver" default="" />
+	</category>
+    <category label="Monitoring">
+	    
+		<setting label="XBMC Events" type="lsep"/> 
+        <setting label="XBMC Start" id="xbmc_started" type="labelenum" values="Yes|No" default="No"/>
+                  
+        <setting label="Video Events" type="lsep"/> 
+        <setting label="Video Start" id="video_started" type="labelenum" values="Yes|No" default="No"/>
+        <setting label="Video Stop" id="video_stopped" type="labelenum" values="Yes|No" default="No"/>
+        <setting label="Video Pause" id="video_paused" type="labelenum" values="Yes|No" default="No"/>
+        <setting label="Video Resume" id="video_resumed" type="labelenum" values="Yes|No" default="No"/>
+                
+        <setting label="Audio Events" type="lsep"/> 
+        <setting label="Audio Start" id="audio_started" type="labelenum" values="Yes|No" default="No"/>
+        <setting label="Audio Stop" id="audio_stopped" type="labelenum" values="Yes|No" default="No"/>
+        <setting label="Audio Pause" id="audio_paused" type="labelenum" values="Yes|No" default="No"/>
+        <setting label="Audio Resume" id="audio_resumed" type="labelenum" values="Yes|No" default="No"/>
+        
+    </category>
+</settings>
